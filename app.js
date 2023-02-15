@@ -1,4 +1,4 @@
-function getRandomIntInclusive(min, max) {
+/*function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
@@ -12,4 +12,4 @@ function getRandomIntInclusive(min, max) {
   console.log(arr);
 
   const arr2 = [...Array(10)].map(_=> getRandomIntInclusive(1,11));
-  console.log(arr2);
+  console.log(arr2); */
