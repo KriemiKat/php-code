@@ -1,16 +1,21 @@
 /*Programiškai ridenkite du žaidimo kauliukus- sugeneruokite du atsitiktinius skaičius nuo 1 iki 6 Jeigu kauliukų suma didesnė nei 8 jūs laimėjote, priešingu atveju pralošėte. Išveskite atsakymą, kuriame būtų abiejų kauliukų reikšmės ir išvada laimėjote ar pralošėte. */
 
-  /*  let x = Math.floor(Math.random() * 6) + 1;
-    console.log(x);
-    let y = Math.floor(Math.random() * 6) + 1;
-    console.log(y);
+function getRandom(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
-    if(x + y >= 8) {
-        console.log((x), (y), 'Sveikiname, Jus laimejote!')    }
+let pirmas = (getRandom(3, 6));
+let antras = (getRandom(3, 6));
+console.log(pirmas, antras);
+
+    if(pirmas + antras >= 8) {
+        console.log((pirmas), (antras), 'Sveikiname, Jus laimejote!')    }
     else {
-        console.log((x), (y), 'Apgailestaujame, Jus pralosete')    }
+        console.log((pirmas), (antras), 'Apgailestaujame, Jus pralosete')    }
 
-        console.log('-----------------------'); */
+        console.log('-----------------------')
 
 /*Gyveno du katinukai, Pilkis ir Murklys. Jų svoriai kilogramais buvo atsitiktiniai dydžiai nuo 3 iki 6. Parašyti programą, kuri išvestų katinukų svorius ir apskaičiuotų, kuris katinukas yra lengvesnis. Atsakymas turi būti katinukų vardai su jų svoriais ir lengvesnio katinuko vardas. Jeigu katinukai sveria vienodai, vietoj katinuko vardo parašykite, kad “katinukų svoriai vienodi”. */
 
@@ -23,6 +28,7 @@ function getRandom(min, max) {
 let Pilkis = (getRandom(3, 6));
 let Murklys = (getRandom(3, 6));
 console.log(Pilkis, Murklys);
+
 
   if (Pilkis>Murklys)
     {console.log ('Murklys' + '=' + Murklys, 'Pilkis' + '=' + Pilkis + ' ' + 'Murklys lengvesnis')}
@@ -70,3 +76,21 @@ if (x === 1 || x === 5) {
 
 
 /*(BOSO lygis) Sugeneruokite tris atsitiktinius skaičius nuo 1 iki 7. Skaičius atspausdinkite nuo mažiausio iki didžiausio. Pavyzdžiui: sugeneravus 4, 2, 4 juos reikia atspausdinti tokia tvarka: 2 4 4; */
+
+function getRandom(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+let a = (getRandom(1, 7));
+let b = (getRandom(1, 7));
+let c = (getRandom(1, 7));
+
+console.log(a,b,c)
+let d = [];
+d.push(a,b,c)
+console.log(d);
+
+const sorted = d.sort((a, b) => a - b);
+console.log(d); 
